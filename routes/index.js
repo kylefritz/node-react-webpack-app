@@ -5,13 +5,11 @@ import React from 'react'
 const router = express.Router()
 export default router
 
-/* GET home page. */
+/* Always render the same page! */
 router.get('/', (req, res, next) => {
-  var props = { message: 'Meow' }
-  var content = React.renderToString(React.createElement(App, props))
   res.render('layout', {
     title: 'My App',
-    content: content,
+    content: null,
     props: props
   })
 })

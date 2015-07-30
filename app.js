@@ -26,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'build')))
 
 import routes from './routes/index'
 app.use('/', routes)
+app.use('/', require('./routes/entries'))
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
